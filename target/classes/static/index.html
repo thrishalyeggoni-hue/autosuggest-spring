@@ -18,35 +18,27 @@
 
 <body>
 
-    <!-- LEFT CONFETTI -->
-    <div class="confetti left">
-        <span></span><span></span><span></span><span></span><span></span>
-        <span></span><span></span><span></span><span></span><span></span>
-    </div>
-
-    <!-- RIGHT CONFETTI -->
-    <div class="confetti right">
-        <span></span><span></span><span></span><span></span><span></span>
-        <span></span><span></span><span></span><span></span><span></span>
-    </div>
-
-    <!-- NAVBAR -->
-
     <nav class="navbar">
 
         <div class="logo">
 
-            <img src="being-infinity.png" alt="Being Infinity">
+    <img src="being-infinity.png" alt="Being Infinity Logo">
 
-            <span>Being Infinity</span>
+    <div class="logo-text">
 
-        </div>
+        <h2>Being Infinity</h2>
+
+        <p>VNRVJIET • Web Development Bootcamp</p>
+
+    </div>
+
+</div>
 
         <div class="nav-links">
 
             <a href="#">Home</a>
 
-            <a href="https://github.com" target="_blank">GitHub</a>
+            <a href="https://github.com/" target="_blank">Github</a>
 
             <a href="#">LeetCode</a>
 
@@ -56,27 +48,28 @@
 
     </nav>
 
-    <!-- CARD -->
-
     <main>
 
         <div class="card">
 
-            <img src="john.png" alt="John Doe">
+            <img
+                id="user-image"
+                src="john.png"
+                alt="User Image">
 
             <div class="card-content">
 
                 <h2 id="user-name">John Doe</h2>
 
-                <p class="gender">Male</p>
+                <p id="user-gender">Male</p>
 
-                <button class="toggle-btn">
+                <button class="toggle-btn" onclick="toggleUser()">
 
                     Toggle User
 
                 </button>
 
-                <button class="random-btn">
+                <button class="random-btn" onclick="randomUser()">
 
                     Random User
 

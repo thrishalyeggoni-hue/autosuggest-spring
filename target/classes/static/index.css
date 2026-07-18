@@ -1,7 +1,3 @@
-/* ===========================
-   GLOBAL
-=========================== */
-
 *{
     margin:0;
     padding:0;
@@ -11,17 +7,11 @@
 
 body{
 
-    background:linear-gradient(135deg,#f4f8ff,#d9ecff);
+    background:linear-gradient(135deg,#eef5ff,#d8ebff);
 
     min-height:100vh;
 
-    overflow-x:hidden;
-
 }
-
-/* ===========================
-   NAVBAR
-=========================== */
 
 .navbar{
 
@@ -35,15 +25,13 @@ body{
 
     background:white;
 
-    box-shadow:0 5px 20px rgba(0,0,0,.08);
-
-    position:sticky;
-
-    top:0;
-
-    z-index:100;
+    box-shadow:0 4px 20px rgba(0,0,0,.1);
 
 }
+
+/* ===========================
+   Logo
+=========================== */
 
 .logo{
 
@@ -57,19 +45,33 @@ body{
 
 .logo img{
 
-    width:55px;
+    width:60px;
 
-    height:55px;
+    height:60px;
 
     border-radius:50%;
 
     object-fit:cover;
 
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+
 }
 
-.logo span{
+.logo-text{
 
-    font-size:28px;
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+}
+
+.logo-text h2{
+
+    margin:0;
+
+    font-size:30px;
 
     font-weight:700;
 
@@ -78,6 +80,24 @@ body{
     -webkit-background-clip:text;
 
     -webkit-text-fill-color:transparent;
+
+    letter-spacing:.5px;
+
+}
+
+.logo-text p{
+
+    margin-top:3px;
+
+    color:#6b7280;
+
+    font-size:13px;
+
+    font-weight:500;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
 
 }
 
@@ -93,11 +113,7 @@ body{
 
     text-decoration:none;
 
-    color:#444;
-
-    font-size:17px;
-
-    font-weight:500;
+    color:#333;
 
     padding:10px 18px;
 
@@ -115,10 +131,6 @@ body{
 
 }
 
-/* ===========================
-   MAIN
-=========================== */
-
 main{
 
     display:flex;
@@ -127,17 +139,13 @@ main{
 
     align-items:center;
 
-    padding:70px;
+    margin-top:60px;
 
 }
 
-/* ===========================
-   CARD
-=========================== */
-
 .card{
 
-    width:380px;
+    width:370px;
 
     background:white;
 
@@ -145,15 +153,15 @@ main{
 
     overflow:hidden;
 
-    box-shadow:0 20px 45px rgba(0,0,0,.18);
+    box-shadow:0 15px 35px rgba(0,0,0,.2);
 
-    transition:.4s;
+    transition:.3s;
 
 }
 
 .card:hover{
 
-    transform:translateY(-10px);
+    transform:translateY(-8px);
 
 }
 
@@ -169,7 +177,7 @@ main{
 
 .card-content{
 
-    padding:30px;
+    padding:25px;
 
     text-align:center;
 
@@ -177,33 +185,23 @@ main{
 
 .card-content h2{
 
-    color:#222;
-
     margin-bottom:10px;
-
-    font-size:30px;
 
 }
 
-.gender{
+#user-gender{
 
-    color:#777;
+    color:gray;
 
     margin-bottom:25px;
 
-    font-size:18px;
-
 }
-
-/* ===========================
-   BUTTONS
-=========================== */
 
 button{
 
     width:100%;
 
-    padding:15px;
+    padding:14px;
 
     border:none;
 
@@ -214,8 +212,6 @@ button{
     cursor:pointer;
 
     font-size:16px;
-
-    font-weight:600;
 
     transition:.3s;
 
@@ -246,132 +242,5 @@ button{
 .random-btn:hover{
 
     background:#059669;
-
-}
-
-/* ===========================
-   CONFETTI
-=========================== */
-
-.confetti{
-
-    position:fixed;
-
-    top:0;
-
-    width:90px;
-
-    height:100vh;
-
-    pointer-events:none;
-
-    overflow:hidden;
-
-    z-index:999;
-
-}
-
-.left{
-
-    left:0;
-
-}
-
-.right{
-
-    right:0;
-
-}
-
-.confetti span{
-
-    position:absolute;
-
-    width:10px;
-
-    height:20px;
-
-    border-radius:3px;
-
-    animation:fall linear infinite;
-
-}
-
-/* Different colors */
-
-.confetti span:nth-child(1){left:5%;background:#ff4d4d;animation-duration:5s;}
-.confetti span:nth-child(2){left:15%;background:#ffd93d;animation-duration:4s;animation-delay:1s;}
-.confetti span:nth-child(3){left:25%;background:#00d084;animation-duration:6s;}
-.confetti span:nth-child(4){left:35%;background:#4d96ff;animation-duration:5s;}
-.confetti span:nth-child(5){left:45%;background:#ff66cc;animation-duration:4.5s;}
-.confetti span:nth-child(6){left:55%;background:#ff8800;animation-duration:6s;}
-.confetti span:nth-child(7){left:65%;background:#8b5cf6;animation-duration:5.5s;}
-.confetti span:nth-child(8){left:75%;background:#00c2ff;animation-duration:4.3s;}
-.confetti span:nth-child(9){left:85%;background:#32cd32;animation-duration:5.8s;}
-.confetti span:nth-child(10){left:95%;background:#ff1493;animation-duration:4.7s;}
-
-@keyframes fall{
-
-    0%{
-
-        transform:translateY(-120px) rotate(0deg);
-
-        opacity:1;
-
-    }
-
-    100%{
-
-        transform:translateY(110vh) rotate(720deg);
-
-        opacity:0;
-
-    }
-
-}
-
-/* ===========================
-   RESPONSIVE
-=========================== */
-
-@media(max-width:768px){
-
-.navbar{
-
-    flex-direction:column;
-
-    gap:15px;
-
-    padding:20px;
-
-}
-
-.nav-links{
-
-    flex-wrap:wrap;
-
-    justify-content:center;
-
-}
-
-main{
-
-    padding:30px;
-
-}
-
-.card{
-
-    width:100%;
-
-    max-width:360px;
-
-}
-
-.logo span{
-
-    font-size:22px;
-
-}
 
 }
